@@ -2,6 +2,11 @@
 let senior_salary;
 let mid_senior_salary;
 let junior_salary;
+let formEl=document.getElementById("formID");
+let mainEl=document.getElementById("myMain");
+let emploees=[];
+
+
 function Employee( empid, fullName, department ,level, image ) {
     this.Empid = empid;
     this.fullName = fullName;
@@ -11,6 +16,17 @@ function Employee( empid, fullName, department ,level, image ) {
     
 
     // allEmployee.push(this);
+}
+
+Employee.prototype.generateID= function(){
+    let id=Math.floor(1000 + Math.random() * 9000);
+    for(let i=0;i<=emploees.length-2;i++){
+        if(emploees[i].emploeeID==id){
+            id=Math.floor(1000 + Math.random() * 9000);
+            i=0
+        }
+    }
+    this.emploeeID=id;
 }
 let Employee1 = new Employee("1000","Ghazi Samer","Administration","Senior");
 let Employee2 = new Employee("1001","Lana Ali","Finance","Senior");
@@ -54,13 +70,10 @@ function midSeniorSalary (){
     return junior_salary;
   }
 
-
-Employee1.render();
-Employee2.render();
-Employee3.render();
-Employee4.render();
-Employee5.render();
-Employee6.render();
+  for(let i=0;i<emploees.length;i++){
+    emploees[i].generateID();
+    emploees[i].render();
+}
 
 
 
