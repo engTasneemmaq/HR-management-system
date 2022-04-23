@@ -1,31 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hrmanagment</title>
+    <title>document</title>
+    <link rel="icon" type="image/x-icon" href="assest/Personnel_icon-icons.com_74700.ico">
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <header>
-      <li> <a href="index.html">Home</a> </li>
-        <li> <a href="accounting.html"> accounting</a></li>
-       
+        <li> <a href="index.html">Home</a> </li>
+        <li> <a href="accounting.html"> Accounting</a></li>
+        <br>
 
-      
     </header>
-    
+
     <main>
+        <section>
+            <form>
+                <label for="fullName">Full Name:</label><br>
+                <input type="text" id="fullName" name="fullName" value="John adam"><br>
+                <br>
+                <label for="Department">Department:</label><br>
+                <select name="Department" id="Department">
+                    <option value="Administration">Administration</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Development">Development</option>
+                    <option value="Finance">Finance</option>
+                </select><br>
+                <br>
+                <label for="Level">Level</label><br>
+                <select name="Level" id="Level">
+                    <option value="Junior">Junior</option>
+                    <option value="Mid-Senior">Mid-Senior</option>
+                    <option value="Senior">Senior</option>
+                </select><br>
+                <br>
+
+                <label for="image">Image URL:</label><br>
+                <input type="text" id="image" name="image" placeholder="Enter your image URL"><br>
+                <br>
+
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section id="myMain">
+      
+        </section>
+
+
 
     </main>
 
     <footer>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-snapchat"></a>
+        <a href="#" class="fa fa-whatsapp"></a>
 
-          <p> Created by tasneem. © 2022</p>
+        <p> Created by tasneem. © 2022</p>
 
     </footer>
 
-    <script src="app.js"></script>  
+   
+    <script src="app.js"></script>
 </body>
+
 </html>
