@@ -2,7 +2,7 @@
 let senior_salary;
 let mid_senior_salary;
 let junior_salary;
-function Employee( empid, fullName, department ,level, image,sal ) {
+function Employee( empid, fullName, department ,level, image ) {
     this.Empid = empid;
     this.fullName = fullName;
     this.department = department;
@@ -20,7 +20,7 @@ let Employee5 = new Employee("1004","Omar Zaid","Development","Senior");
 let Employee6 = new Employee("1005","Rana Saleh","Development","junior");
 let Employee7 = new Employee("1006","Hadi Ahmad","Finance","mid-Senior");
 
-Employee.prototype.summary = function (){
+Employee.prototype.render = function (){
     if (this.level === "Senior"){
         this.salary = salarySenior();
     }
@@ -55,9 +55,12 @@ function midSeniorSalary (){
   }
 
 
-
-Employee6.summary();
-console.log(Employee6);
+Employee1.render();
+Employee2.render();
+Employee3.render();
+Employee4.render();
+Employee5.render();
+Employee6.render();
 
 
 
