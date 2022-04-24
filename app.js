@@ -18,6 +18,8 @@ function Employee( empid, fullName, department ,level, image ) {
     // allEmployee.push(this);
 }
 
+
+
 Employee.prototype.generateID= function(){
     let id=Math.floor(1000 + Math.random() * 9000);
     for(let i=0;i<=emploees.length-2;i++){
@@ -28,6 +30,13 @@ Employee.prototype.generateID= function(){
     }
     this.emploeeID=id;
 }
+
+Employee.prototype.render = function () {
+    console.log(this.name);
+    document.write(`<h1> employee name is ${this.name}, the net salary is ${netSalary} </h1>`)
+}
+
+
 let Employee1 = new Employee("1000","Ghazi Samer","Administration","Senior");
 let Employee2 = new Employee("1001","Lana Ali","Finance","Senior");
 let Employee3 = new Employee("1002","Tamara Ayoub","Marketing","Senior");
@@ -46,8 +55,7 @@ Employee.prototype.render = function (){
     else {
         this.salary = juniorSalary();
     }
-    document.write(`<h1> the name of the employee is: ${this.fullName}</h1>`)
-     document.write(`<h1> the salary is: ${this.salary} </h1>`)
+    
 }
 
 function salarySenior (){
@@ -74,6 +82,8 @@ function midSeniorSalary (){
     emploees[i].generateID();
     emploees[i].render();
 }
+
+
 
 
 
