@@ -105,6 +105,11 @@ function midSeniorSalary (){
     return junior_salary;
   }
 
+  for(let i=0;i<=emploees.length-1;i++){
+    emploees[i].generateID();
+    emploees[i].render();
+}
+
 
 
 
