@@ -1,10 +1,12 @@
 'use strict';
+let emploees=[];
 let senior_salary;
 let mid_senior_salary;
 let junior_salary;
 let formEl=document.getElementById("formID");
-let mainEl=document.getElementById("mainID");
-let emploees=[];
+let cardEl=document.getElementById("cardDiv");
+let sectionEl=document.getElementById("cardSEction");
+
 
 
 function Employee( empid, fullName, department ,level, image ) {
@@ -21,14 +23,7 @@ function Employee( empid, fullName, department ,level, image ) {
 
 
 Employee.prototype.generateID= function(){
-    let id=Math.floor(1000 + Math.random() * 9000);
-    for(let i=0;i<=emploees.length-2;i++){
-        if(emploees[i].emploeeID==id){
-            id=Math.floor(1000 + Math.random() * 9000);
-            i=0
-        }
-    }
-    this.emploeeID=id;
+    return Math.floor(1000 + Math.random() * 9000);
 }
 
 Employee.prototype.render = function () {
@@ -36,7 +31,7 @@ Employee.prototype.render = function () {
     document.write(`<h1> employee name is ${this.name}, the net salary is ${netSalary} </h1>`)
 }
 
-formEl.addEventListener("Submit",handleSubmit);
+forms.addEventListener("Submit",handleSubmit);
 
 function handleSubmit(event){
     event.preventDefault();
@@ -92,10 +87,7 @@ function midSeniorSalary (){
     return junior_salary;
   }
 
-  for(let i=0;i<emploees.length;i++){
-    emploees[i].generateID();
-    emploees[i].render();
-}
+
 
 
 
