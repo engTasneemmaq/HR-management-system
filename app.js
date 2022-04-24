@@ -1,11 +1,11 @@
 'use strict';
+let emploees=[];
 let senior_salary;
 let mid_senior_salary;
 let junior_salary;
 let formEl=document.getElementById("formID");
-let mainEl=document.getElementById("mainID");
-let emploees=[];
-
+let mainEl=document.getElementById("myMain");
+let divEl=document.getElementById("cardDiv");
 
 function Employee( empid, fullName, department ,level, image ) {
     this.Empid = empid;
@@ -15,28 +15,41 @@ function Employee( empid, fullName, department ,level, image ) {
     this.image = image;
     
 
-    // allEmployee.push(this);
+    allEmployee.push(this);
 }
 
+Employee.prototype.render= function(){
+    //  document.write(`<h2>Employee name is: ${this.fullName} and his/her salary is: ${this.salary}</h2>`);
+      
+      let card=document.createElement('div');
+     mainEl.appendChild(card);
+      
+      let img=document.createElement('img');
+      img.src=this.imageURL;
+      img.width="250";
+      img.height="250";
+      card.appendChild(img);
+  
+      let appendOne=document.createElement('h4');
+      appendOne.textContent=`Name: ${this.fullName} - ID: ${this.emploeeID}`;
+      card.appendChild(appendOne);
+  
+      let appendTwo=document.createElement('h4');
+      appendTwo.textContent=`Department: ${this.department} - Level: ${this.level}`;
+      card.appendChild(appendTwo);
+  
 
 
 Employee.prototype.generateID= function(){
-    let id=Math.floor(1000 + Math.random() * 9000);
-    for(let i=0;i<=emploees.length-2;i++){
-        if(emploees[i].emploeeID==id){
-            id=Math.floor(1000 + Math.random() * 9000);
-            i=0
-        }
-    }
-    this.emploeeID=id;
+    return Math.floor(1000 + Math.random() * 9000);
 }
 
 Employee.prototype.render = function () {
     console.log(this.name);
-    document.write(`<h1> employee name is ${this.name}, the net salary is ${netSalary} </h1>`)
+    // document.write(`<h1> employee name is ${this.name}, the net salary is ${netSalary} </h1>`)
 }
 
-formEl.addEventListener("Submit",handleSubmit);
+forms.addEventListener("Submit",handleSubmit);
 
 function handleSubmit(event){
     event.preventDefault();
@@ -92,10 +105,7 @@ function midSeniorSalary (){
     return junior_salary;
   }
 
-  for(let i=0;i<emploees.length;i++){
-    emploees[i].generateID();
-    emploees[i].render();
-}
+
 
 
 
