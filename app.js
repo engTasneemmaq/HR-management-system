@@ -49,20 +49,6 @@ Employee.prototype.render = function () {
     // document.write(`<h1> employee name is ${this.name}, the net salary is ${netSalary} </h1>`)
 }
 
-forms.addEventListener("Submit",handleSubmit);
-
-function handleSubmit(event){
-    event.preventDefault();
-    let fullName=event.target.fullName.value;
-    let department=event.target.department.value;
-    let level=event.target.level.value;
-    let image=event.target.image.value;
-    let newEmp=new Employee(fullName,department,level,image);
-    newEmp.generateID();
-    newEmp.render();
-    emploees.push(newEmp);
-
-}
 
 let Employee1 = new Employee("1000","Ghazi Samer","Administration","Senior");
 let Employee2 = new Employee("1001","Lana Ali","Finance","Senior");
@@ -109,6 +95,44 @@ function midSeniorSalary (){
     emploees[i].generateID();
     emploees[i].render();
 }
+
+forms.addEventListener("Submit",handleSubmit);
+
+function handleSubmit(event){
+    event.preventDefault();
+    let fullName=event.target.fullName.value;
+    let department=event.target.department.value;
+    let level=event.target.level.value;
+    let image=event.target.image.value;
+    let newEmp=new Employee(fullName,department,level,image);
+    newEmp.generateID();
+    newEmp.render();
+    saveData(emploees);
+
+}
+function saveData(data) {
+
+    let stringfiyData = JSON.stringify(data);
+    localStorage.setItem("emps", stringfiyData);
+}
+
+
+function getData() {
+    let retrievedData = localStorage.getItem("emps");
+    let arrayData = JSON.parse(retrievedData);
+
+    if (arrayData != null) {
+        for (let i = 0; i < arrayData.length; i++) {
+            new Employee(arrayData[i].emploeeID, arrayData[i].fullName, arrayData[i].department, arrayData[i].level, arrayData[i].imageURL, arrayData[i].salary);
+            if(i!=arrayData.length-1){emploees.pop();}
+          
+        }
+    }
+
+    renderAll();
+}
+
+getData();
 
 
 
