@@ -45,7 +45,7 @@ Employee.prototype.generateID= function(){
 }
 
 Employee.prototype.render = function () {
-    console.log(this.name);
+    console.log(this.fullName);
     // document.write(`<h1> employee name is ${this.name}, the net salary is ${netSalary} </h1>`)
 }
 
