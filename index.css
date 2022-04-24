@@ -55,7 +55,7 @@ div.card {
 img {
   width: 200px;
   height: 200px;
-  background-color: grey;
+ 
   
 }
 
@@ -73,7 +73,7 @@ div h4 {
 }
 .container{
 
-  width:600px;
+  width: 300px;
 box-shadow: 3px 3px 3px 3px , white;
 margin:10px;
 background-color:#5f2c82;
