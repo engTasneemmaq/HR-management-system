@@ -3,7 +3,7 @@ let senior_salary;
 let mid_senior_salary;
 let junior_salary;
 let formEl=document.getElementById("formID");
-let mainEl=document.getElementById("myMain");
+let mainEl=document.getElementById("mainID");
 let emploees=[];
 
 
@@ -36,6 +36,20 @@ Employee.prototype.render = function () {
     document.write(`<h1> employee name is ${this.name}, the net salary is ${netSalary} </h1>`)
 }
 
+formEl.addEventListener("Submit",handleSubmit);
+
+function handleSubmit(event){
+    event.preventDefault();
+    let fullName=event.target.fullName.value;
+    let department=event.target.department.value;
+    let level=event.target.level.value;
+    let image=event.target.image.value;
+    let newEmp=new Employee(fullName,department,level,image);
+    newEmp.generateID();
+    newEmp.render();
+    emploees.push(newEmp);
+
+}
 
 let Employee1 = new Employee("1000","Ghazi Samer","Administration","Senior");
 let Employee2 = new Employee("1001","Lana Ali","Finance","Senior");
