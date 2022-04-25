@@ -20,7 +20,7 @@ function Employee(empid, fullName, department, level, image,salary) {
 
     allEmployee.push(this);
 }
-let Employee1 = new Employee("1000", "Ghazi Samer", "Administration", "Senior","");
+let Employee1 = new Employee("1000", "Ghazi Samer", "Administration", "Senior");
 let Employee2 = new Employee("1001", "Lana Ali", "Finance", "Senior");
 let Employee3 = new Employee("1002", "Tamara Ayoub", "Marketing", "Senior");
 let Employee4 = new Employee("1003", "Safi Walid", "Administration", "mid-Senior");
