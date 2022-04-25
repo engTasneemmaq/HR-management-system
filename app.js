@@ -37,27 +37,6 @@ Employee.prototype.render = function () {
         this.salary = juniorSalary();
     }
 
-    let card = document.createElement('div');
-    mainEl.appendChild(card);
-
-    let img = document.createElement('img');
-    img.src = this.imageURL;
-    img.width = "250";
-    img.height = "250";
-    card.appendChild(img);
-
-    let appendOne = document.createElement('h4');
-    appendOne.textContent = `Name: ${this.fullName} - ID: ${this.empid}`;
-    card.appendChild(appendOne);
-
-    let appendTwo = document.createElement('h4');
-    appendTwo.textContent = `Department: ${this.department} - Level: ${this.level}`;
-    card.appendChild(appendTwo);
-
-    let appendthree = document.createElement('h4');
-    appendthree.textContent = `salary: ${this.salary}`;
-    card.appendChild(appendthree);
-
 
 }
 
@@ -80,6 +59,44 @@ function juniorSalary() {
     junior_salary = junior_salary - junior_salary * 0.075;
     return junior_salary;
 }
+
+forms.addEventListener("Submit",handleSubmit);
+
+function handleSubmit(event){
+    event.preventDefault();
+    let fullName=event.target.fullName.value;
+    let department=event.target.department.value;
+    let level=event.target.level.value;
+    let image=event.target.image.value;
+    let newEmp=new Employee(fullName,department,level,image);
+    newEmp.generateID();
+    newEmp.render();
+    saveData(emploees);
+
+}
+function saveData(data) {
+
+    let stringfiyData = JSON.stringify(data);
+    localStorage.setItem("emps", stringfiyData);
+}
+
+
+function getData() {
+    let retrievedData = localStorage.getItem("emps");
+    let arrayData = JSON.parse(retrievedData);
+
+    if (arrayData != null) {
+        for (let i = 0; i < arrayData.length; i++) {
+            new Employee(arrayData[i].emploeeID, arrayData[i].fullName, arrayData[i].department, arrayData[i].level, arrayData[i].imageURL, arrayData[i].salary);
+            if(i!=arrayData.length-1){emploees.pop();}
+          
+        }
+    }
+
+    renderAll();
+}
+
+getData();
 
 
 
