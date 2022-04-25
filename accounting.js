@@ -13,7 +13,7 @@ let admSum=0,marSum=0,findSum=0,devSum=0;
 
     let admName = document.createElement("td");
     admName.textContent = "Administration";
-    tr1.appendChild(addName);
+    tr1.appendChild(admName);
 
     let employeesNoAdm = document.createElement("td");
     employeesNoAdm.textContent = admNumber;
@@ -37,11 +37,11 @@ let admSum=0,marSum=0,findSum=0,devSum=0;
     tr2.appendChild(marName);
 
     let employeesNoMar = document.createElement("td");
-    employeesNoMar.textContent = marNo;
+    employeesNoMar.textContent = marNumber;
     tr2.appendChild(employeesNoMar);
 
     let avgSalaryMar = document.createElement("td");
-    avgSalaryMar.textContent = marSum/marNo;
+    avgSalaryMar.textContent = marSum/marNumber;
     tr2.appendChild(avgSalaryMar);
     
     let totalSalaryMar = document.createElement("td");
@@ -79,7 +79,7 @@ let admSum=0,marSum=0,findSum=0,devSum=0;
     tr4.appendChild(devName);
 
     let employeesNoDev = document.createElement("td");
-    employeesNoDev.textContent = devNo;
+    employeesNoDev.textContent = devNumber;
     tr4.appendChild(employeesNoDev);
 
     let avgSalaryDev = document.createElement("td");
@@ -93,7 +93,7 @@ let admSum=0,marSum=0,findSum=0,devSum=0;
 
 
     let sum=admSum+marSum+findSum+devSum;
-    let total=admNumber+marNo+findNo+devNumber;
+    let total=admNumber+marNumber+findNumber+devNumber;
 
     let tfr = document.createElement("tr");
     tableFooterEl.appendChild(tfr);
@@ -109,7 +109,7 @@ let admSum=0,marSum=0,findSum=0,devSum=0;
     let finalSum = document.createElement("td");
     finalSum.textContent = sum;
     tfr.appendChild(finalSum);
-}
+
 
 
 function getData() {
