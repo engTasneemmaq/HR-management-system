@@ -31,7 +31,7 @@ Employee.prototype.render= function(){
       card.appendChild(img);
   
       let appendOne=document.createElement('h4');
-      appendOne.textContent=`Name: ${this.fullName} - ID: ${this.emploeeID}`;
+      appendOne.textContent=`Name: ${this.fullName} - ID: ${this.empid}`;
       card.appendChild(appendOne);
   
       let appendTwo=document.createElement('h4');
@@ -44,10 +44,6 @@ Employee.prototype.generateID= function(){
     return Math.floor(1000 + Math.random() * 9000);
 }
 
-Employee.prototype.render = function () {
-    console.log(this.fullName);
-    // document.write(`<h1> employee name is ${this.name}, the net salary is ${netSalary} </h1>`)
-}
 
 
 let Employee1 = new Employee("1000","Ghazi Samer","Administration","Senior");
