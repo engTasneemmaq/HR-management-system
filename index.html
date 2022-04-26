@@ -2,142 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
-    <link rel="icon" type="image/x-icon" href="assest/Personnel_icon-icons.com_74700.ico">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+  <link rel="icon" type="image/x-icon" href="assest/Personnel_icon-icons.com_74700.ico">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <header>
-        <li> <a href="index.html">Home</a> </li>
-        <li> <a href="accounting.html"> Accounting</a></li>
+  <header>
+    <li> <a href="index.html">Home</a> </li>
+    <li> <a href="accounting.html"> Accounting</a></li>
+    <br>
+
+  </header>
+
+  <main>
+
+
+    <section>
+      <form id="formId">
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" value="John adam"><br>
+        <br>
+        <label for="Department">Department:</label><br>
+        <select name="Department" id="department">
+          <option value="Administration">Administration</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Development">Development</option>
+          <option value="Finance">Finance</option>
+        </select><br>
+        <br>
+        <label for="Level">Level</label><br>
+        <select name="Level" id="level">
+          <option value="Junior">Junior</option>
+          <option value="Mid-Senior">Mid-Senior</option>
+          <option value="Senior">Senior</option>
+        </select><br>
         <br>
 
-    </header>
+        <label for="image">Image URL:</label><br>
+        <input type="text" id="image" name="image" placeholder="Enter your image URL"><br>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+    <section id="myMain">
 
-    <main>
-        <section>
-            <div class="cardDiv">
-                <img src="assest/iconfinder-1-avatar-2754574_120513.png" alt="Employee1" >
-                <div class="container">
-                  <h4><b>Ghazi Samer</b></h4>
-                  <h3><b>1000</b></h3>
-                  <p>Administration</p>
-                  <p>Senior</p>
-                </div>
+      <ul id="cardDiv">
 
-                <img src="assest/iconfinder-5-avatar-2754581_120512.png" alt="Employee2">
-                <div class="container">
-                  <h4><b>Lana Ali</b></h4>
-                  <h3><b>1001</b></h3>
-                  <p>Finance</p>
-                  <p>Senior</p>
-                </div>
+      </ul>
 
-                <img src="assest/iconfinder-11-avatar-2754576_120520.png" alt="Employee3" >
-                <div class="container ">
-                  <h4><b>Tamara Ayoub</b></h4>
-                  <h3><b>1002</b></h3>
-                  <p>Marketing</p>
-                  <p>Senior</p>
-                </div>
-
-                <img src="assest/iconfinder-2-avatar-2754578_120514.png" alt="Employee4">
-                <div class="container">
-                  <h4><b>Safi Walid</b></h4>
-                  <h3><b>1003</b></h3>
-                  <p>Administration</p>
-                  <p>mid-Senior</p>
-                </div>
-
-                <img src="assest/iconfinder-7-avatar-2754582_120519.png" alt="Employee5">
-                <div class="container">
-                  <h4><b>Omar Zaid</b></h4>
-                  <h3><b>1004</b></h3>
-                  <p>Development</p>
-                  <p>Senior</p>
-                </div>
-
-                <img src="assest/iconfinder-4-avatar-2754580_120522.png" alt="Employee6">
-                <div class="container">
-                  <h4><b>Rana Saleh</b></h4>
-                  <h3><b>1005</b></h3>
-                  <p>Development</p>
-                  <p>junior</p>
-                </div>
-
-                <img src="assest/man-2_icon-icons.com_55041.png" alt="Employee6">
-                <div class="container">
-                  <h4><b>Hadi Ahmad</b></h4>
-                  <h3><b>1006</b></h3>
-                  <p>Finance</p>
-                  <p>mid-Senior</p>
-                </div>
+    </section>
 
 
 
+  </main>
+
+  <footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-snapchat"></a>
+    <a href="#" class="fa fa-whatsapp"></a>
+
+    <p> Created by tasneem. © 2022</p>
+
+  </footer>
 
 
 
-              </div>
-
-        </section>
-        <section>
-            <form>
-                <label for="fullName">Full Name:</label><br>
-                <input type="text" id="fullName" name="fullName" value="John adam"><br>
-                <br>
-                <label for="Department">Department:</label><br>
-                <select name="Department" id="Department">
-                    <option value="Administration">Administration</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="Development">Development</option>
-                    <option value="Finance">Finance</option>
-                </select><br>
-                <br>
-                <label for="Level">Level</label><br>
-                <select name="Level" id="Level">
-                    <option value="Junior">Junior</option>
-                    <option value="Mid-Senior">Mid-Senior</option>
-                    <option value="Senior">Senior</option>
-                </select><br>
-                <br>
-
-                <label for="image">Image URL:</label><br>
-                <input type="text" id="image" name="image" placeholder="Enter your image URL"><br>
-                <br>
-                <input type="submit" value="Submit">
-            </form>
-        </section>
-        <section id="myMain">
-
-            <ul id="cardDiv">
-
-            </ul>
-      
-        </section>
-
-
-
-    </main>
-
-    <footer>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-snapchat"></a>
-        <a href="#" class="fa fa-whatsapp"></a>
-
-        <p> Created by tasneem © 2022</p>
-
-    </footer>
-
-   
-    <script src="app.js"></script>
-    <script src="accounting.js"></script
 </body>
 
 </html>
