@@ -10,18 +10,17 @@ function getData() {
     let retrievedData = localStorage.getItem("employee");
     let arrayData = JSON.parse(retrievedData);
 
-
-    length=arrayData.length
-
     for (let i = 0; i < arrayData.length; i++) {
-        let name = arrayData[i].full_Name
-        let id = arrayData[i].employeeId;
+        let name = arrayData[i].fullName;
+
+        let id = arrayData[i].empid;
         let department = arrayData[i].department;
         let level = arrayData[i].level;
         let salary = arrayData[i].salary;
+
         let tr = document.createElement("tr");
-        tableElement.appendChild(tr);
-        sum = arrayData[i].salary + sum;
+        tableEl.appendChild(tr);
+     
 
         let priceTd = document.createElement("td")
         priceTd.textContent = name;

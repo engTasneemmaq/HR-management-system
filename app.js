@@ -4,15 +4,15 @@ let senior_salary;
 let mid_senior_salary;
 let junior_salary;
 
-let select1= document.getElementById("department");
-let select2= document.getElementById("level");
+let select1 = document.getElementById("department");
+let select2 = document.getElementById("level");
 
 let formEl = document.getElementById("formId");
 let mainEl = document.getElementById("myMain");
 let divEl = document.getElementById("cardDiv");
 
 
-function Employee(empid, fullName, department, level, image,salary) {
+function Employee(empid, fullName, department, level, image, salary) {
 
     this.empid = empid;
     this.fullName = fullName;
@@ -26,13 +26,13 @@ function Employee(empid, fullName, department, level, image,salary) {
     allEmployee.push(this);
 }
 
-let Employee1 = new Employee("1000", "Ghazi Samer", "Administration", "Senior","assest/iconfinder-1-avatar-2754574_120513.png");
-let Employee2 = new Employee("1001", "Lana Ali", "Finance", "Senior","assest/iconfinder-4-avatar-2754580_120522.png");
-let Employee3 = new Employee("1002", "Tamara Ayoub", "Marketing", "Senior","assest/iconfinder-11-avatar-2754576_120520.png");
-let Employee4 = new Employee("1003", "Safi Walid", "Administration", "mid-Senior","assest/iconfinder-2-avatar-2754578_120514.png");
-let Employee5 = new Employee("1004", "Omar Zaid", "Development", "Senior","assest/iconfinder-7-avatar-2754582_120519.png");
-let Employee6 = new Employee("1005", "Rana Saleh", "Development", "junior","assest/iconfinder-11-avatar-2754576_120520.png");
-let Employee7 = new Employee("1006", "Hadi Ahmad", "Finance", "mid-Senior","assest/man-2_icon-icons.com_55041.png");
+let Employee1 = new Employee("1000", "Ghazi Samer", "Administration", "Senior", "assest/iconfinder-1-avatar-2754574_120513.png");
+let Employee2 = new Employee("1001", "Lana Ali", "Finance", "Senior", "assest/iconfinder-4-avatar-2754580_120522.png");
+let Employee3 = new Employee("1002", "Tamara Ayoub", "Marketing", "Senior", "assest/iconfinder-11-avatar-2754576_120520.png");
+let Employee4 = new Employee("1003", "Safi Walid", "Administration", "mid-Senior", "assest/iconfinder-2-avatar-2754578_120514.png");
+let Employee5 = new Employee("1004", "Omar Zaid", "Development", "Senior", "assest/iconfinder-7-avatar-2754582_120519.png");
+let Employee6 = new Employee("1005", "Rana Saleh", "Development", "junior", "assest/iconfinder-11-avatar-2754576_120520.png");
+let Employee7 = new Employee("1006", "Hadi Ahmad", "Finance", "mid-Senior", "assest/man-2_icon-icons.com_55041.png");
 
 
 Employee.prototype.render = function () {
@@ -48,7 +48,7 @@ Employee.prototype.render = function () {
     mainEl.appendChild(card);
 
     let img = document.createElement('img');
-    img.setAttribute('src',this.image);
+    img.setAttribute('src', this.image);
     img.width = "250";
     img.height = "250";
     card.appendChild(img);
@@ -114,21 +114,19 @@ Employee.prototype.id = function () {
     return Math.floor(1000 + Math.random() * 9000);
 
 };
+
 function saveData(data) {
 
     let stringfiyData = JSON.stringify(data);
-    localStorage.setItem("emloyee", stringfiyData);
+    localStorage.setItem("employee", stringfiyData);
 }
 
 
 
-function getData() {
-
-}
 function getData() {
     let retrievedData = localStorage.getItem("employee");
     let arrayData = JSON.parse(retrievedData);
-   
+
 }
 
 getData();
