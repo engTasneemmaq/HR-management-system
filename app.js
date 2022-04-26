@@ -64,7 +64,7 @@ Employee.prototype.render = function () {
 function salarySenior() {
     senior_salary = Math.floor(Math.random() * (2000 - 1500 + 1) + 1500);
     senior_salary = senior_salary - senior_salary * 0.075;
-    console.log("1");
+    // console.log("1");
     return senior_salary;
 }
 
@@ -88,7 +88,7 @@ formEl.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault();
-    console.log("welcom");
+    // console.log("welcom");
     let empid = Employee.prototype.id();
     let fullName = event.target.fullName.value;
     let department = event.target.department.value;
@@ -111,7 +111,7 @@ Employee.prototype.id = function () {
 function saveData(data) {
 
     let stringfiyData = JSON.stringify(data);
-    localStorage.setItem("emplo", stringfiyData);
+    localStorage.setItem("emloyee", stringfiyData);
 }
 
 
@@ -120,7 +120,7 @@ function getData() {
 
 }
 function getData() {
-    let retrievedData = localStorage.getItem("emplo");
+    let retrievedData = localStorage.getItem("employee");
     let arrayData = JSON.parse(retrievedData);
    
 }

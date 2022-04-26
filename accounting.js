@@ -7,7 +7,7 @@ avg = sum /length;
 
 
 function getData() {
-    let retrievedData = localStorage.getItem("emplo");
+    let retrievedData = localStorage.getItem("employee");
     let arrayData = JSON.parse(retrievedData);
 
 
