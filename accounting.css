@@ -18,11 +18,12 @@ header li{
     }
     body {
         margin: 0;
-        background: linear-gradient(45deg, #49a09d, #5f2c82);
+        background: linear-gradient(45deg, #61e709, #047332);
         font-family: sans-serif;
         font-weight: 100;
        
       }
+
 
       footer{
         background-color:darkmagenta;
@@ -30,7 +31,7 @@ header li{
         left: 0;
         bottom: 0;
         width: 100%;
-        color: white;
+        color: rgb(255, 255, 255);
         text-align: center;
     
     }

@@ -3,6 +3,7 @@
 about function with array and loops
 
 2.How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
-before i started i think it would take one hour , but take 3-5 hour
+ it take 2 hour
 
 
+# add local storage to my repo in branch local storage 
