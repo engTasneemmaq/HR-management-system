@@ -24,29 +24,6 @@ header li{
        
       }
 
-      table, th,td{
-        border: 1px solid;
-        text-align: center;
-        color: black;
-    
-      
-        
-        }
-    
-    table{
-      width: 100%;
-        background-color:rgb(197, 159, 20);
-        font-size: 1rem;
-        border-collapse: collapse;
-    }
-       
-    th{
-        background-color:rgb(181, 249, 23);
-        width: auto
-        
-    }
-
-     
 
       footer{
         background-color:darkmagenta;
