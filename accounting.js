@@ -1,20 +1,46 @@
 'use strict';
-let emploees=[];
 let tableEl = document.getElementById("tableID");
-let tableFooterEl=document.getElementById("tableFooter");
-
-
-
+let sum ;
+let avg;
+getData();
+avg = sum /length;
 
 
 function getData() {
-    let retrievedData = localStorage.getItem("emps");
-    emploees = JSON.parse(retrievedData);
-   
+    let retrievedData = localStorage.getItem("employee");
+    let arrayData = JSON.parse(retrievedData);
+
+
+    length=arrayData.length
+
+    for (let i = 0; i < arrayData.length; i++) {
+        let name = arrayData[i].full_Name
+        let id = arrayData[i].employeeId;
+        let department = arrayData[i].department;
+        let level = arrayData[i].level;
+        let salary = arrayData[i].salary;
+        let tr = document.createElement("tr");
+        tableElement.appendChild(tr);
+        sum = arrayData[i].salary + sum;
+
+        let priceTd = document.createElement("td")
+        priceTd.textContent = name;
+        tr.appendChild(priceTd);
+
+        let idTd = document.createElement("td")
+        idTd.textContent = id;
+        tr.appendChild(idTd);
+
+        let departmentTd = document.createElement("td")
+        departmentTd.textContent = department;
+        tr.appendChild(departmentTd);
+
+        let levelTD = document.createElement("td")
+        levelTD.textContent = level;
+        tr.appendChild(levelTD);
+
+        let salaryTD = document.createElement("td")
+        salaryTD.textContent = salary;
+        tr.appendChild(salaryTD);
     }
-
-    
-
-getData();
-
-renderTable();
+}
