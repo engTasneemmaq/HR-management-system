@@ -18,7 +18,6 @@ function Employee(empid, fullName, department, level, image,salary) {
     this.salary = salary;
 
 
-    allEmployee.push(this);
 }
 let Employee1 = new Employee("1000", "Ghazi Samer", "Administration", "Senior","");
 let Employee2 = new Employee("1001", "Lana Ali", "Finance", "Senior");
@@ -28,8 +27,6 @@ let Employee5 = new Employee("1004", "Omar Zaid", "Development", "Senior");
 let Employee6 = new Employee("1005", "Rana Saleh", "Development", "junior");
 let Employee7 = new Employee("1006", "Hadi Ahmad", "Finance", "mid-Senior");
 
-Employee.prototype.render = function () {
-    if (this.level === "Senior") {
         this.salary = salarySenior();
     } else if (this.level === "mid_senior") {
         this.salary = midSeniorSalary();
