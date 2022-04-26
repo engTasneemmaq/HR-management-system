@@ -3,19 +3,24 @@ let allEmployee = [];
 let senior_salary;
 let mid_senior_salary;
 let junior_salary;
-let select1 = document.getElementById("department");
-let select2 = document.getElementById("level");
+
+let select1= document.getElementById("department");
+let select2= document.getElementById("level");
+
 let formEl = document.getElementById("formId");
 let mainEl = document.getElementById("myMain");
 let divEl = document.getElementById("cardDiv");
 
-function Employee(empid, fullName, department, level, image, salary) {
+
+function Employee(empid, fullName, department, level, image,salary) {
+
     this.empid = empid;
     this.fullName = fullName;
     this.department = department;
     this.level = level;
     this.image = image;
     this.salary = salary;
+
 
 
     allEmployee.push(this);
@@ -58,13 +63,12 @@ Employee.prototype.render = function () {
     appendthree.textContent = `salary: ${this.salary}`;
     card.appendChild(appendthree);
 
-
 }
 
 function salarySenior() {
     senior_salary = Math.floor(Math.random() * (2000 - 1500 + 1) + 1500);
     senior_salary = senior_salary - senior_salary * 0.075;
-    // console.log("1");
+
     return senior_salary;
 }
 
