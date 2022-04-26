@@ -3,13 +3,13 @@ let allEmployee = [];
 let senior_salary;
 let mid_senior_salary;
 let junior_salary;
-let select1= document.getElementById("department");
-let select2= document.getElementById("level");
+let select1 = document.getElementById("department");
+let select2 = document.getElementById("level");
 let formEl = document.getElementById("formId");
 let mainEl = document.getElementById("myMain");
 let divEl = document.getElementById("cardDiv");
 
-function Employee(empid, fullName, department, level, image,salary) {
+function Employee(empid, fullName, department, level, image, salary) {
     this.empid = empid;
     this.fullName = fullName;
     this.department = department;
@@ -89,28 +89,47 @@ formEl.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
     event.preventDefault();
     console.log("welcom");
-    let empid= Employee.prototype.id();
+    let empid = Employee.prototype.id();
     let fullName = event.target.fullName.value;
     let department = event.target.department.value;
     let level = event.target.level.value;
     let image = event.target.image.value;
-    let newEmp = new Employee(empid,fullName,department,level,image);
+    let newEmp = new Employee(empid, fullName, department, level, image);
     newEmp.render();
-   allEmployee.push(newEmp);
-    
+    allEmployee.push(newEmp);
+
+
+    saveData(allEmployee);
+
 
 }
 Employee.prototype.id = function () {
     console.log(Math.floor(1000 + Math.random() * 9000));
     return Math.floor(1000 + Math.random() * 9000);
-   
+
+};
+function saveData(data) {
+
+    let stringfiyData = JSON.stringify(data);
+    localStorage.setItem("emplo", stringfiyData);
 }
 
 
 
+function getData() {
+
+}
+function getData() {
+    let retrievedData = localStorage.getItem("emplo");
+    let arrayData = JSON.parse(retrievedData);
+   
+}
+
+getData();
+
+
 
 for (let i = 0; i <= allEmployee.length - 1; i++) {
- 
     allEmployee[i].render();
 
 }
