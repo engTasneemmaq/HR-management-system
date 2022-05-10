@@ -7,3 +7,12 @@ about function with array and loops
 
 
 # add local storage to my repo in branch local storage 
+
+# Render each department information in a table:
+
+Department Name
+Number of employees in each department.
+Average salary of the department
+Total salary Where average salary is the summation of salaries for all employees in each department divided by the number of the employees in that department and total salary is the summation of salaries for all employees in each department.
+
+#Add a table footer which will have the total number of employees, the average salary for all departments and the total salary for all departments, as shown below.
